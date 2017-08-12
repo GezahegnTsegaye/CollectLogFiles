@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 11, 2017 6:26:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="logfiles.LogFiles" table="log_files" catalog="sms" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="logName" type="string">
+            <column name="log_name" length="45" not-null="true" />
+        </property>
+        <property name="detailDescription" type="string">
+            <column name="detail_description" length="45" not-null="true" />
+        </property>
+        <property name="eventDate" type="timestamp">
+            <column name="event_date" length="19" not-null="true" />
+        </property>
+        <property name="eventTime" type="timestamp">
+            <column name="event_time" length="19" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="45" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
