@@ -1,5 +1,4 @@
 
-import page.Register_User;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -131,9 +130,8 @@ public class login extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
        Home ru = new Home();
-       
-      
         ru.setVisible(true);
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
