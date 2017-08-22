@@ -71,15 +71,16 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnLogFiles" pref="208" max="32767" attributes="0"/>
+                      <Component id="btnLogFiles" pref="217" max="32767" attributes="0"/>
                       <Component id="btnNewUser" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnModuleReg" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnModuleEntry1" max="32767" attributes="0"/>
+                      <Component id="btnModuleEntry1" pref="217" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -92,7 +93,9 @@
                   <Component id="btnLogFiles" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                   <Component id="btnNewUser" min="-2" pref="33" max="-2" attributes="0"/>
-                  <EmptySpace pref="578" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnModuleReg" min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace pref="527" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -123,10 +126,18 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnModuleEntry1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Module Entry"/>
+            <Property name="text" type="java.lang.String" value="Module View"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModuleEntry1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnModuleReg">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Module Register"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModuleRegActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

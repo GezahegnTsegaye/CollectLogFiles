@@ -1,6 +1,7 @@
 
-import page.RegisterModule;
+import page.ViewModules;
 import page.ATM_logFiles;
+import page.RegisterModules;
 import page.Register_User;
 
 /*
@@ -34,6 +35,7 @@ public class Home extends javax.swing.JFrame {
         btnLogFiles = new javax.swing.JButton();
         btnNewUser = new javax.swing.JButton();
         btnModuleEntry1 = new javax.swing.JButton();
+        btnModuleReg = new javax.swing.JButton();
         desktopPane = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
 
@@ -55,10 +57,17 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        btnModuleEntry1.setText("Module Entry");
+        btnModuleEntry1.setText("Module View");
         btnModuleEntry1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModuleEntry1ActionPerformed(evt);
+            }
+        });
+
+        btnModuleReg.setText("Module Register");
+        btnModuleReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModuleRegActionPerformed(evt);
             }
         });
 
@@ -69,13 +78,14 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogFiles, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                    .addComponent(btnNewUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnLogFiles, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                    .addComponent(btnNewUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnModuleReg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(btnModuleEntry1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnModuleEntry1, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
@@ -85,7 +95,9 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btnLogFiles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79)
                 .addComponent(btnNewUser, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(578, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnModuleReg, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(527, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(77, 77, 77)
@@ -150,7 +162,7 @@ public class Home extends javax.swing.JFrame {
 
     private void btnNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewUserActionPerformed
         // TODO add your handling code here:
-        Register_User  ru = new Register_User();
+        Register_User ru = new Register_User();
 
         //clf.setEnabled(true);
         desktopPane.add(ru);
@@ -161,18 +173,29 @@ public class Home extends javax.swing.JFrame {
 
     private void btnModuleEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModuleEntry1ActionPerformed
         // TODO add your handling code here:
-        RegisterModule logForm = new RegisterModule();
+        ViewModules logForm = new ViewModules();
 
         //clf.setEnabled(true);
         desktopPane.add(logForm);
         logForm.setVisible(true);
     }//GEN-LAST:event_btnModuleEntry1ActionPerformed
 
-   
+    private void btnModuleRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModuleRegActionPerformed
+        // TODO add your handling code here:
+        RegisterModules modules = new RegisterModules();
+
+        //clf.setEnabled(true);
+        desktopPane.add(modules);
+        modules.setVisible(true);
+
+
+    }//GEN-LAST:event_btnModuleRegActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogFiles;
     private javax.swing.JButton btnModuleEntry1;
+    private javax.swing.JButton btnModuleReg;
     private javax.swing.JButton btnNewUser;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JLabel jLabel1;

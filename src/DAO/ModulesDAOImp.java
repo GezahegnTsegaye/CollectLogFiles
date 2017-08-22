@@ -5,15 +5,14 @@
  */
 package DAO;
 
-import model.LogFiles;
+import model.Modules;
 import org.hibernate.Query;
 
 /**
  *
  * @author gezu-pc
  */
-public class LogFilesDAOImp implements LogFilesDAO {
-
+public class ModulesDAOImp implements ModulesDAO{
     private HandleDB handleDB;
 
     public HandleDB getHandleDB() {
@@ -24,50 +23,50 @@ public class LogFilesDAOImp implements LogFilesDAO {
         this.handleDB = handleDB;
     }
 
-    public LogFilesDAOImp() {
+    public ModulesDAOImp() {
     }
 
     @Override
-    public void create(LogFiles logFiles) {
-        handleDB.create(logFiles);
+    public void create(Modules modules) {
+        handleDB.create(modules);
     }
 
     @Override
-    public void delete(LogFiles logFiles) {
-        handleDB.delete(logFiles);
+    public void delete(Modules modules) {
+        handleDB.delete(modules);
     }
 
     @Override
-    public void update(LogFiles logFiles) {
-        handleDB.update(logFiles);
+    public void update(Modules modules) {
+        handleDB.update(modules);
     }
 
     @Override
-    public LogFiles retrieve(String logname) {
-        String queryString = "from LogFiles where logname = :logFiles";
+    public Modules retrieve(String name) {
+        String queryString = "from Modules where name = :name";
         Query query = handleDB.getSession().createQuery(queryString);
-        query.setParameter("logFiles", logname);
-        LogFiles u = (LogFiles) query.uniqueResult();
+        query.setParameter("name", name);
+        Modules u = (Modules) query.uniqueResult();
 //        handleDB.close();
         return u;
     }
 
     @Override
-    public boolean exists(String logname) {
-        return retrieve(logname) != null;
+    public boolean exists(String name) {
+        return retrieve(name) != null;
     }
 
     @Override
     public Long numberOfLogFiles() {
-        Long size = (Long) handleDB.getSession().createQuery("select count(*) from LogFiles").uniqueResult();
+        Long size = (Long) handleDB.getSession().createQuery("select count(*) from Modules").uniqueResult();
         return size;
     }
 
     public static void main(String args[]) {
         LogFilesDAOImp imp = new LogFilesDAOImp();
-        LogFiles logFiles = new LogFiles();
-        logFiles.setLogName("information");
-        String names = logFiles.getLogName();
+        Modules modules = new Modules();
+        modules.setName("information");
+        String names = modules.getName();
 
 //        System.out.println("imp = " + imp.retrieve(names));
     }

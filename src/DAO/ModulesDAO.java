@@ -5,24 +5,23 @@
  */
 package DAO;
 
-import model.LogFiles;
-
+import model.Modules;
 
 /**
  *
  * @author gezu-pc
  */
-public interface LogFilesDAO {
+public interface ModulesDAO {
 
-    public void create(LogFiles logFiles);
+    public void create(Modules modules);
 
-    public void delete(LogFiles logFiles);
+    public void delete(Modules modules);
 
-    public void update(LogFiles logFiles);
+    public void update(Modules modules);
 
-    public LogFiles retrieve(String logname);
-
-    public boolean exists(String logname);
-
+    public Modules retrieve(String name);
+    
+    public boolean exists(String name);
+    
     public Long numberOfLogFiles();
 }

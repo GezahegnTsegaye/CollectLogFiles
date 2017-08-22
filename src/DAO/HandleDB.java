@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logfiles;
+package DAO;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -38,7 +38,7 @@ public class HandleDB {
             begin();
             switch (op) {
                 case CREATE:
-                    getSession().save(obj);
+                    getSession().saveOrUpdate(obj);
                     break;
                 case UPDATE:
                     getSession().update(obj);

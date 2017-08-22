@@ -42,4 +42,6 @@ Contributor(s):
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="sms"/>
   <table-filter match-name="log_files"/>
+  <table-filter match-name="modules"/>
+  <table-filter match-name="station"/>
 </hibernate-reverse-engineering>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 22, 2017 4:01:47 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Station" table="station" catalog="sms" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="city" type="string">
+            <column name="CITY" length="20" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="2" />
+        </property>
+        <property name="latN" type="java.lang.Double">
+            <column name="LAT_N" precision="22" scale="0" />
+        </property>
+        <property name="longW" type="java.lang.Double">
+            <column name="LONG_W" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

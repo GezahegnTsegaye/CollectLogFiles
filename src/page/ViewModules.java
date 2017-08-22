@@ -10,12 +10,12 @@ package page;
  *
  * @author gezu-pc
  */
-public class RegisterModule extends javax.swing.JInternalFrame {
+public class ViewModules extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form LoginPage
      */
-    public RegisterModule() {
+    public ViewModules() {
         initComponents();
     }
 
